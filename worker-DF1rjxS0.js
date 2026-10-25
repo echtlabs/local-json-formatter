@@ -1,0 +1,1 @@
+(function(){self.onmessage=e=>{let{mode:t,data:n}=e.data;try{if(!n||!n.trim()){self.postMessage({ok:!0,result:``});return}let e=JSON.parse(n),r=t===`FORMAT`?JSON.stringify(e,null,2):JSON.stringify(e);self.postMessage({ok:!0,result:r,parsed:e})}catch(e){self.postMessage({ok:!1,error:e.message})}}})();
